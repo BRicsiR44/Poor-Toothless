@@ -1,0 +1,33 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #11141a; /* Nagyon sötét háttér a monitor többi részének */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    user-select: none; /* Megakadályozza, hogy véletlenül kijelölődjön a szöveg játék közben */
+}
+
+#game-container {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 4px solid #2c3e50; /* Sötétkék elegáns keret a játék körül */
+}
+
+canvas {
+    background-color: #1e272e; /* A játék arénájának alap színe */
+    display: block;
+    
+    /* VIZUÁLIS SKÁLÁZÁS: A belső 800x600-as logikát felnagyítjuk a képernyőn */
+    width: 1066px;
+    height: 800px;
+    
+    /* Biztosítja, hogy a pixelek és élek élesek maradjanak a nagyítás során */
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
